@@ -1,0 +1,23 @@
+import javax.persistence.*;
+
+@Entity
+public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+
+    // Define relationships and other columns as needed
+
+    public Customer() {
+        // Default constructor
+    }
+
+    public Customer(String name) {
+        this.name = name;
+    }
+
+    // Getters and setters for name and other fields
+}
